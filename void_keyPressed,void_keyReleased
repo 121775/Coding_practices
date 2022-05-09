@@ -1,0 +1,28 @@
+int value = 0;
+
+void setup() {
+  size(500, 500);
+}
+
+void draw() {
+  ellipse(250, 250, 100, 100);
+  fill(value);
+}
+
+/*Called when the key is presseed. 
+holding down the key will only repeatedly call this function
+*/
+void keyPressed() {
+  if (value == 0) {
+    value = 255;
+  } else {
+    value = 0;
+  }
+}
+
+/*Called when the pressed key is release.*/
+void keyReleased() {
+  if (value == 0) {
+    value = 127;
+  }
+}
