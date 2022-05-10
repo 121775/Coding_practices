@@ -1,0 +1,7 @@
+float[] pieces; //Creates a single Array (Think of cardboard)
+
+pieces = new float [5]; //Creates the lists of 5 in the array
+
+//To initiate the list first:
+
+int[] numbers = {5,4,3,2,1};
