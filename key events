@@ -1,0 +1,28 @@
+/**
+ * Test program for keyboard events.
+ *
+ * @author  Stefan Marks - comp570 lecturer
+ * @version 1.0 - 2012/03/08: Created
+ * @version 2.0 - 2020/05/08: Added timestamp
+ */
+ 
+void draw() {
+ // Empty draw() keeps program running
+}
+
+void keyPressed() {
+  println(getTimestamp() + "keyPressed(): key=" + int(key) + ", keyCode=" + keyCode);
+}
+
+void keyTyped() {
+  println(getTimestamp() + "keyTyped(): key=" + int(key) + ", keyCode=" + keyCode);
+}
+
+void keyReleased() {
+  println(getTimestamp() + "keyReleased(): key=" + int(key) + ", keyCode=" + keyCode);
+}
+
+String getTimestamp()
+{
+  return "Frame " + frameCount + ":\t";
+}
