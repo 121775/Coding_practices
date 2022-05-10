@@ -1,0 +1,22 @@
+import processing.sound.*; //import every sound information from library
+
+SoundFile soundfile;  //assign variable for SoundFile
+
+void setup() {
+
+  size(640, 360);      
+  background(255);  //sets the canvas size and background
+
+  soundfile = new SoundFile(this, "bongo7.wav"); //imports the SoundFile 
+
+  soundfile.loop(); //plays the sound looping
+}
+
+void draw() {
+  
+  /*alters the amplitude of sound.
+  if user moves the mouse far right of x axis, the sound gets bigger, but 
+  the sounds gets smaller if moved to the far left. */
+  float amplitude = map(mouseX, 0, width, 0.2, 1.0);  
+  soundfile.amp(amplitude);
+}
