@@ -1,0 +1,57 @@
+void draw() {
+  
+  /*Empty draw(). draw() is required 
+  to get the programme running.
+  */
+  background(0);
+  // draw previous mouse position in red
+  //stroke(255, 0, 0);
+  //line(0, pmouseY, width, pmouseY);
+  //line(pmouseX, 0, pmouseX, height);
+  // draw current mouse position in green
+ // stroke(0, 255, 0);
+  //line(0, mouseY, width, mouseY);
+  //line(mouseX, 0, mouseX, height);
+}
+
+void mousePressed() {
+  println("click");
+}
+
+void mouseReleased() {
+  println("clock");
+}
+
+void mouseClicked() {
+  println(getTimestamp() + "mouseClicked(): mouseButton=" + mouseButtonName());
+}
+
+void mouseMoved() {
+  println(getTimestamp() + "mouseMoved(): " +
+          "mousex=" + mouseX + ", mousey=" + mouseY + 
+          ", pmouseX=" + pmouseX + ", pMouseY=" + pmouseY);
+}
+
+void mouseDragged(){
+  println(getTimestamp() + "mouseDragged(): mouseButton=" + mouseButtonName() +
+          ", mousex=" + mouseX + ", mousey=" + mouseY + 
+          ", pmouseX=" + pmouseX + ", pMouseY=" + pmouseY);
+}
+
+String mouseButtonName()
+{
+  String name = "";
+  switch (mouseButton)
+  {
+    case LEFT:   name = "left";   break;
+    case RIGHT:  name = "right";  break;
+    case CENTER: name = "middle"; break;
+    default:     name = "none";   break;
+  }
+  return name;
+}
+
+String getTimestamp()
+{
+  return "Frame " + frameCount + ":\t";
+}
